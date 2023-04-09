@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://damxe8w0vc7x2"
-path="res://.godot/imported/Exo2-ThinItalic.ttf-62b1641081dc1afc897f8c0d58dc1504.fontdata"
+path="res://.godot/imported/Exo2-ThinItalic.ttf-dd23c00b7990b4fc0535972145e13047.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/static/Exo2-ThinItalic.ttf"
-dest_files=["res://.godot/imported/Exo2-ThinItalic.ttf-62b1641081dc1afc897f8c0d58dc1504.fontdata"]
+source_file="res://assets/fonts/static/Exo2-ThinItalic.ttf"
+dest_files=["res://.godot/imported/Exo2-ThinItalic.ttf-dd23c00b7990b4fc0535972145e13047.fontdata"]
 
 [params]
 

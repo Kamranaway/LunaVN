@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://d4f714g3nis0r"
-path="res://.godot/imported/DotGothic16-Regular.ttf-52d7e09e84b80e474172cfbb8a7fa8fb.fontdata"
+path="res://.godot/imported/DotGothic16-Regular.ttf-f641d48da4322a36e719dbdb98fe1479.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/static/DotGothic16-Regular.ttf"
-dest_files=["res://.godot/imported/DotGothic16-Regular.ttf-52d7e09e84b80e474172cfbb8a7fa8fb.fontdata"]
+source_file="res://assets/fonts/static/DotGothic16-Regular.ttf"
+dest_files=["res://.godot/imported/DotGothic16-Regular.ttf-f641d48da4322a36e719dbdb98fe1479.fontdata"]
 
 [params]
 

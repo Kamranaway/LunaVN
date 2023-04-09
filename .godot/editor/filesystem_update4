@@ -1,6 +1,3 @@
-res://Assets/Scenes/Dialog.tscn
-res://Assets/Fonts/Exo2Bold.tres
-res://Assets/Fonts/Exo2.tres
-res://Assets/Scripts/Dialog/Dialog.gd
-res://Assets/Scenes/StageBase.tscn
-res://Assets/Scripts/Dialog/DialogConfig.gd
+res://assets/scripts/menu/PauseMenu.gd
+res://assets/scenes/menu/PauseMenu.tscn
+res://assets/scenes/menu/MainMenu.tscn

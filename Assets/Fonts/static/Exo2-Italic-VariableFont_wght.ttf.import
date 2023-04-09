@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c54sbhhbwhfi7"
-path="res://.godot/imported/Exo2-Italic-VariableFont_wght.ttf-81f04a095b218621aba36ee5bb88dfaa.fontdata"
+path="res://.godot/imported/Exo2-Italic-VariableFont_wght.ttf-528a840e2aeed3f68c3c73a39c7ca8c3.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/static/Exo2-Italic-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/Exo2-Italic-VariableFont_wght.ttf-81f04a095b218621aba36ee5bb88dfaa.fontdata"]
+source_file="res://assets/fonts/static/Exo2-Italic-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/Exo2-Italic-VariableFont_wght.ttf-528a840e2aeed3f68c3c73a39c7ca8c3.fontdata"]
 
 [params]
 

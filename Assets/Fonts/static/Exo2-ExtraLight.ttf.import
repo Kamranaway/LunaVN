@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cgkwtvchd5iiq"
-path="res://.godot/imported/Exo2-ExtraLight.ttf-a35d1c733bba00f42865ad02f3134dd5.fontdata"
+path="res://.godot/imported/Exo2-ExtraLight.ttf-6f1f8b1c2b0dc9443c4d5758975e1f21.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/static/Exo2-ExtraLight.ttf"
-dest_files=["res://.godot/imported/Exo2-ExtraLight.ttf-a35d1c733bba00f42865ad02f3134dd5.fontdata"]
+source_file="res://assets/fonts/static/Exo2-ExtraLight.ttf"
+dest_files=["res://.godot/imported/Exo2-ExtraLight.ttf-6f1f8b1c2b0dc9443c4d5758975e1f21.fontdata"]
 
 [params]
 

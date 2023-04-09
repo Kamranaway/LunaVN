@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://brm0cvhjs4qae"]
+
+[ext_resource type="Script" path="res://assets/scripts/menu/MainMenu.gd" id="1_v4ff2"]
+[ext_resource type="FontFile" path="res://assets/fonts/Exo2Bold.tres" id="2_8ctyf"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v4ff2")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Start" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8ctyf")
+theme_override_font_sizes/font_size = 80
+text = "Start"
+
+[node name="Load" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8ctyf")
+theme_override_font_sizes/font_size = 80
+text = "Load"
+
+[node name="Options" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8ctyf")
+theme_override_font_sizes/font_size = 80
+text = "Options"
+
+[node name="Exit" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8ctyf")
+theme_override_font_sizes/font_size = 80
+text = "Exit"
+
+[connection signal="button_down" from="MarginContainer/Panel/CenterContainer/VBoxContainer/Start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="MarginContainer/Panel/CenterContainer/VBoxContainer/Load" to="." method="_on_load_button_down"]
+[connection signal="button_down" from="MarginContainer/Panel/CenterContainer/VBoxContainer/Options" to="." method="_on_options_button_down"]
+[connection signal="button_down" from="MarginContainer/Panel/CenterContainer/VBoxContainer/Exit" to="." method="_on_exit_button_down"]

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bc36q61w00pca"
-path="res://.godot/imported/Exo2-ExtraBoldItalic.ttf-7a34d325f3bd3ea6c0a5f3197d9b78cf.fontdata"
+path="res://.godot/imported/Exo2-ExtraBoldItalic.ttf-9c73afd9149b59af8d715a0f71571f36.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/static/Exo2-ExtraBoldItalic.ttf"
-dest_files=["res://.godot/imported/Exo2-ExtraBoldItalic.ttf-7a34d325f3bd3ea6c0a5f3197d9b78cf.fontdata"]
+source_file="res://assets/fonts/static/Exo2-ExtraBoldItalic.ttf"
+dest_files=["res://.godot/imported/Exo2-ExtraBoldItalic.ttf-9c73afd9149b59af8d715a0f71571f36.fontdata"]
 
 [params]
 

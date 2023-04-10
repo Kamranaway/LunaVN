@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv1y3magfvjb7"]
+
+[ext_resource type="PackedScene" uid="uid://2p6aqe7wouxc" path="res://assets/scenes/gameplay/Actor.tscn" id="1_k3nwv"]
+[ext_resource type="Texture2D" uid="uid://div88yh28cqmf" path="res://assets/textures/ui/pointer.png" id="2_w6jbl"]
+
+[node name="Actor" instance=ExtResource("1_k3nwv")]
+actor_name = "TestActor"
+pose_list = Array[Texture]([ExtResource("2_w6jbl")])
+
+[node name="Pose" parent="." index="0"]
+texture = ExtResource("2_w6jbl")

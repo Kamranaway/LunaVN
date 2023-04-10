@@ -1,14 +1,17 @@
+Node
+Node2D
+Sprite2D
+AnimatedSprite2D
 Button
+MenuButton
 VBoxContainer
+CenterContainer
 Panel
 MarginContainer
-CenterContainer
 AudioStreamPlayer
 RichTextLabel
-Node
 NinePatchRect
 Label
-Node2D
 HBoxContainer
 PanelContainer
 Container
@@ -18,5 +21,4 @@ VSeparator
 ReferenceRect
 Control
 TextureRect
-Sprite2D
 AnimationPlayer

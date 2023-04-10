@@ -117,3 +117,5 @@ layout_mode = 2
 [node name="DialogConfig" type="Node" parent="."]
 script = ExtResource("4_4u555")
 dialog_text_margin_offset_x = 13.0
+dialog_font = ExtResource("5_51w1e")
+actor_name_font = ExtResource("2_hky5r")

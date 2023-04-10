@@ -1,3 +1,8 @@
-res://assets/scripts/menu/PauseMenu.gd
-res://assets/scenes/menu/PauseMenu.tscn
-res://assets/scenes/menu/MainMenu.tscn
+res://assets/scenes/gameplay/StageBase.tscn
+res://assets/scripts/gameplay/StageBase.gd
+res://assets/scripts/gameplay/Choice.gd
+res://assets/scenes/gameplay/Actor.tscn
+res://assets/scripts/gameplay/events/ChoiceEvent.gd
+res://assets/scripts/gameplay/events/Event.gd
+res://StageData.tscn
+res://assets/scenes/gameplay/StageData.tscn

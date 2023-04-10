@@ -46,17 +46,19 @@ theme_override_fonts/font = ExtResource("2_8ctyf")
 theme_override_font_sizes/font_size = 80
 text = "Start"
 
-[node name="Load" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+[node name="Load" type="MenuButton" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_8ctyf")
 theme_override_font_sizes/font_size = 80
 text = "Load"
+flat = false
 
-[node name="Options" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+[node name="Options" type="MenuButton" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_8ctyf")
 theme_override_font_sizes/font_size = 80
 text = "Options"
+flat = false
 
 [node name="Exit" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2

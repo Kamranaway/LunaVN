@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://assets/scripts/menu/PauseMenu.gd" id="1_mulf4"]
 [ext_resource type="FontFile" path="res://assets/fonts/Exo2Bold.tres" id="2_fy8i4"]
 
-[node name="Pause Menu" type="Control"]
+[node name="PauseMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,30 +40,33 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="Save" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+[node name="Save" type="MenuButton" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_fy8i4")
 theme_override_font_sizes/font_size = 80
 text = "Save
 "
 
-[node name="Load" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+[node name="Load" type="MenuButton" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_fy8i4")
 theme_override_font_sizes/font_size = 80
 text = "Load"
+flat = false
 
-[node name="Backlog" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+[node name="Backlog" type="MenuButton" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_fy8i4")
 theme_override_font_sizes/font_size = 80
 text = "Backlog"
+flat = false
 
-[node name="Options" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+[node name="Options" type="MenuButton" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_fy8i4")
 theme_override_font_sizes/font_size = 80
 text = "Options"
+flat = false
 
 [node name="Exit" type="Button" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2

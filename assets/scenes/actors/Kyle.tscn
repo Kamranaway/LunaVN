@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b55tqpdpcey58"]
+
+[ext_resource type="Script" path="res://assets/scripts/gameplay/Actor.gd" id="1_8xn2a"]
+[ext_resource type="Texture2D" uid="uid://drl07nq0dk5nq" path="res://assets/textures/actors/caterpillar.png" id="2_jfbwt"]
+
+[node name="Kyle" type="Sprite2D"]
+script = ExtResource("1_8xn2a")
+actor_name = "Kyle"
+pose_list = Array[Texture]([ExtResource("2_jfbwt")])

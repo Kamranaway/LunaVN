@@ -1,9 +1,6 @@
-extends Node2D
+extends Sprite2D
 
 class_name Actor
-
-@onready var DollParts = $DollParts
-@onready var Pose = $Pose
 
 @export var actor_name := ""
 @export var _pose_index := 0
@@ -45,17 +42,17 @@ func _ready():
 
 func set_pose(index):
 	_pose_index = index
-	Pose.texture = pose_list[index]
+	self.texture = pose_list[index]
 
 
 func add_doll_part(index):
 	var new_part = Sprite2D.new()
 	new_part.texture = doll_parts_list[index]
-	DollParts.add_child(new_part)
+	self.add_child(new_part)
 
 
 func clear_doll_parts():
-	for part in DollParts.get_children():
+	for part in self.get_children():
 		part.queue_free()
 
 

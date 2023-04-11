@@ -26,6 +26,7 @@ var _tween
 
 signal dialog_complete
 
+
 func _ready():
 	DialogText.text = ""
 	_tween = get_tree().create_tween()
@@ -46,7 +47,7 @@ func _process(_delta):
 	_characters_visible = clampf(_characters_visible, 0.0, DialogText.get_total_character_count())
 	DialogText.set("visible_characters", _characters_visible)
 	
-	if(int(_characters_visible) > _last_char_count):
+	if(int(_characters_visible) > _last_char_count and len(DialogText.text) > 0):
 		TextSoundPlayer.play()
 	
 	if (_characters_visible >= DialogText.get_total_character_count()):
@@ -70,6 +71,7 @@ func queue_lines(text):
 
 
 func _box_down():
+	DialogText.text = ""
 	_tween = get_tree().create_tween()
 	_tween.tween_property(DialogRig, "position:y", get_viewport_rect().size.y, 
 	_dialog_tween_duration).set_trans(Tween.TRANS_LINEAR)
@@ -147,6 +149,7 @@ func _break_into_lines(text):
 	return lines
 
 func get_config_from_actor(actor: Actor):
+	assert(actor != null, "Actor does not exist")
 	ActorName.text = actor.actor_name
 	DialogConfig.theme_color = actor.theme_color
 	DialogConfig.font_color = actor.font_color

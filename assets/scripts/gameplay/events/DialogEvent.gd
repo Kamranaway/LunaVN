@@ -11,13 +11,16 @@ var actor : Actor
 var text
 var dialog_box: Dialog
 
-func _init(actor, text, dialog_box):
-	self.actor = actor
-	self.text = text
-	self.dialog_box = dialog_box
 
-func execute():
+func _init(actor, text):
+	self.actor = StageController.Actors.get_actor(actor)
+	self.text = text
+	self.dialog_box = StageController.DialogBox
+	super()
+
+
+func start() -> Signal:
 	dialog_box.get_config_from_actor(actor)
 	dialog_box.queue_lines(text)
 	await dialog_box.dialog_complete
-	super()
+	return super()

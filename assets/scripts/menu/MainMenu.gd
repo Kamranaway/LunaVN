@@ -5,7 +5,7 @@ func _on_start_button_down():
 
 
 func _on_load_button_down():
-	pass # Replace with function body.
+	$SaveSlots.visible = true
 
 
 func _on_options_button_down():

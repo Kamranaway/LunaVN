@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3suak6bejq3n"]
+
+[ext_resource type="Script" path="res://assets/scripts/gameplay/StageController.gd" id="1_8rtcw"]
+[ext_resource type="Script" path="res://assets/scripts/gameplay/Background.gd" id="2_exgho"]
+[ext_resource type="Script" path="res://assets/scripts/gameplay/Actors.gd" id="2_ugthb"]
+[ext_resource type="Script" path="res://assets/scripts/gameplay/SFXPlayer.gd" id="3_cqegf"]
+[ext_resource type="PackedScene" uid="uid://coa3dd55rff5e" path="res://assets/scenes/gameplay/Dialog.tscn" id="4_kpafm"]
+[ext_resource type="PackedScene" uid="uid://b2oniftd8uoy6" path="res://assets/scenes/gameplay/Choice.tscn" id="5_82kp5"]
+[ext_resource type="PackedScene" uid="uid://cwtlclgk2w6wa" path="res://assets/scenes/menu/PauseMenu.tscn" id="6_dy2wn"]
+
+[node name="Stage" type="Node"]
+script = ExtResource("1_8rtcw")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_exgho")
+
+[node name="Actors" type="Node" parent="."]
+script = ExtResource("2_ugthb")
+
+[node name="Weather" type="Node" parent="."]
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("3_cqegf")
+
+[node name="Dialog" parent="." instance=ExtResource("4_kpafm")]
+
+[node name="Choice" parent="." instance=ExtResource("5_82kp5")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_dy2wn")]
+visible = false

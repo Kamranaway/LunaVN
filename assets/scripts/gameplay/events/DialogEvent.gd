@@ -1,26 +1,21 @@
 extends Event
-"""
-Event.gd is the base class for all Events. Please
-inherit Event.gd. 
 
-Instantiating an event can be done using the new() function.
-"""
 class_name DialogEvent
 
-var actor : Actor
-var text
-var dialog_box: Dialog
+var _actor_name : String
+var _text
+var _dialog_box: Dialog
 
 
-func _init(actor, text):
-	self.actor = StageController.Actors.get_actor(actor)
-	self.text = text
-	self.dialog_box = StageController.DialogBox
+func _init(actor_name, text):
+	_actor_name = actor_name
+	_text = text
+	_dialog_box = StageController.DialogBox
 	super()
 
 
 func start() -> Signal:
-	dialog_box.get_config_from_actor(actor)
-	dialog_box.queue_lines(text)
-	await dialog_box.dialog_complete
+	_dialog_box.get_config_from_actor(StageController.Actors.get_actor(_actor_name))
+	_dialog_box.queue_lines(_text)
+	await _dialog_box.dialog_complete
 	return super()

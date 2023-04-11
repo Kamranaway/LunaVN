@@ -56,7 +56,7 @@ func clear_doll_parts():
 		part.queue_free()
 
 
-func interpolate_position(new_pos: Vector2, delay, trans_type: Tween.TransitionType):
+func event_interpolate_position(new_pos: Vector2, delay, trans_type: Tween.TransitionType):
 	var _tween = get_tree().create_tween()
 	_tween.tween_method(set_position, position, new_pos, delay).set_trans(trans_type)
 

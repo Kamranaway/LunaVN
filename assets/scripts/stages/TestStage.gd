@@ -1,11 +1,11 @@
-extends Node
+extends Stage
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	StageController.load_background("factory1")
-	StageController.add_actor("TestActor")
-	DialogEvent.new("TestActor", "Blue beans omg")
-	DialogEvent.new("TestActor", "This is a dialog example")
-	#ChoiceEvent.new(["Yes", "No"])
-	#DialogEvent.new("TestActor", "I have simplified stage scripting uwu")
+func stage_script():
+	StageController.event_load_background("factory1")
+	StageController.event_add_actor("Kyle")
+	DialogEvent.new("Kyle", "Hi")
+	DialogEvent.new("Kyle", "This is an event")
+	DialogEvent.new("Kyle", "This is also an event")
+	DialogEvent.new("Kyle", "This is the last event")
+	
+	StageController.load_event(8)

@@ -1,6 +1,6 @@
 extends CenterContainer
 
-class_name Choice
+class_name ChoiceSelect
 
 @onready var choice_button = preload("res://assets/scenes/gameplay/ChoiceButton.tscn")
 @onready var Choices := $Choices
@@ -13,6 +13,7 @@ signal choice_complete
 
 
 func add_choice(text, duration := 0.0):
+	self._duration = duration
 	_num_choices += 1
 	var new_choice = choice_button.instantiate()
 	new_choice.text = text
@@ -33,5 +34,6 @@ func flush_choices(index):
 	
 	if (_duration > 0.0):
 		_timer.disconnect("timeout", flush_choices.bind(-1))
-	print(index)
+	
+	StageController.append_choices(index)
 	emit_signal("choice_complete")

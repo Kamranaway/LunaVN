@@ -20,6 +20,7 @@ config/features=PackedStringArray("4.0", "Forward Plus")
 
 MusicPlayer="*res://assets/scenes/gameplay/MusicPlayer.tscn"
 StageController="*res://assets/scenes/gameplay/StageController.tscn"
+StageData="*res://assets/scripts/gameplay/StageData.gd"
 
 [display]
 

@@ -1,6 +1,7 @@
 Stage
-CharacterBody2D
+StageBase
 Node
+CharacterBody2D
 MarginContainer
 CenterContainer
 TextureRect

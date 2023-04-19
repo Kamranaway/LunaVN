@@ -6,6 +6,7 @@ var _actor_list = []
 
 const ACTOR_DIRECTORY = "res://assets/scenes/actors/"
 
+
 func _ready():
 	var dir = DirAccess.open(ACTOR_DIRECTORY)
 	var files = dir.get_files()

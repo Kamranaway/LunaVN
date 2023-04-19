@@ -13,7 +13,6 @@ class_name Dialog
 @export var _dialog_tween_duration := 1.0
 @export var _fast_foward_velocity := 100 #characters per second
 @export var _velocity := 15 #characters per second
-@export var _start_descended = true
 
 #Line length limit in pixels
 @onready var _length_limit_px = ($DialogRig/MarginContainer.size.x - 
@@ -28,12 +27,8 @@ signal dialog_complete
 
 
 func _ready():
-	DialogText.text = ""
 	_tween = get_tree().create_tween()
-	
-	if (_start_descended):
-		_tween.tween_property(DialogRig, "position:y", get_viewport_rect().size.y, 
-		0).set_trans(Tween.TRANS_LINEAR)
+	_tween.stop()
 
 
 func _process(_delta):
@@ -64,7 +59,8 @@ func _process(_delta):
 
 #Queue lines for a single actor
 func queue_lines(text):
-	_box_up()
+	DialogRig.position.y = get_viewport_rect().size.y
+	await _box_up()
 	_line_queue.clear()
 	_line_queue = _break_into_lines(text) 
 	_next_in_queue()
@@ -74,14 +70,16 @@ func _box_down():
 	DialogText.text = ""
 	_tween = get_tree().create_tween()
 	_tween.tween_property(DialogRig, "position:y", get_viewport_rect().size.y, 
-	_dialog_tween_duration).set_trans(Tween.TRANS_LINEAR)
+		_dialog_tween_duration).set_trans(Tween.TRANS_LINEAR)
 	await _tween.finished
 	emit_signal("dialog_complete")
 
 
 func _box_up():
 	_tween = get_tree().create_tween()
-	_tween.tween_property(DialogRig, "position:y", 0, _dialog_tween_duration).set_trans(Tween.TRANS_LINEAR)
+	_tween.tween_property(DialogRig, "position:y", 0, 
+		_dialog_tween_duration).set_trans(Tween.TRANS_LINEAR)
+	await _tween.finished
 
 
 func _next_in_queue():
@@ -155,4 +153,4 @@ func get_config_from_actor(actor: Actor):
 	DialogConfig.font_color = actor.font_color
 	DialogConfig.dialog_font = actor.dialog_font
 	DialogConfig.actor_name_font = actor.actor_name_font
-	DialogConfig.update_settings()
+	#DialogConfig.update_settings()

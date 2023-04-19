@@ -12,5 +12,5 @@ func _init(callable: Callable):
 
 
 func start() -> Signal:
-	callable.call()
+	await callable.call()
 	return super()

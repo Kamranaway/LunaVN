@@ -43,4 +43,9 @@ func delete_save(index):
 
 func save_choices(choices_made):
 	save_state_dict["choice_data"][str(StageController.stage_name)] = choices_made
-	print(save_state_dict)
+	print(save_state_dict["choice_data"])
+
+
+func get_last_choice() -> int:
+	print(save_state_dict["choice_data"][str(StageController.stage_name)])
+	return 	save_state_dict["choice_data"][str(StageController.stage_name)][StageController.get_num_choices() - 1]

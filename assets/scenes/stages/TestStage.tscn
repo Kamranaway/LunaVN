@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://gls2l7ng0py"]
-
-[ext_resource type="Script" path="res://assets/scripts/stages/TestStage.gd" id="1_tu6k6"]
-
-[node name="Stage" type="Node"]
-script = ExtResource("1_tu6k6")

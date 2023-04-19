@@ -5,9 +5,12 @@ script/source = "extends StageBase
 
 func stage_script():
 	ActorEvent.add_actor(\"Kyle\")
-	#StageEvent.dialog(\"Kyle\", \"Hello World\")
+	StageEvent.dialog(\"Kyle\", \"Hello World\")
 	StageEvent.narrate(\"hello\")
+	
 	StageEvent.choice([\"Yes\", \"No\"])
+	StageEvent.narrate(\"hello\")
+	StageEvent.dialog(\"Kyle\", \"Hello World\")
 	StageEvent.response(\"Kyle\", [\"Yes\", \"No\"])
 "
 

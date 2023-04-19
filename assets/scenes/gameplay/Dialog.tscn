@@ -119,3 +119,7 @@ script = ExtResource("4_4u555")
 dialog_text_margin_offset_x = 13.0
 dialog_font = ExtResource("5_51w1e")
 actor_name_font = ExtResource("2_hky5r")
+
+[connection signal="sort_children" from="." to="." method="_on_sort_children"]
+[connection signal="pre_sort_children" from="DialogRig" to="." method="_on_dialog_rig_pre_sort_children"]
+[connection signal="sort_children" from="DialogRig" to="." method="_on_dialog_rig_sort_children"]

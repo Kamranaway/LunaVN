@@ -154,3 +154,15 @@ func get_config_from_actor(actor: Actor):
 	DialogConfig.dialog_font = actor.dialog_font
 	DialogConfig.actor_name_font = actor.actor_name_font
 	#DialogConfig.update_settings()
+
+
+func _on_dialog_rig_sort_children():
+	DialogRig.position.y = get_viewport_rect().size.y
+
+
+func _on_dialog_rig_pre_sort_children():
+	DialogRig.position.y = get_viewport_rect().size.y
+
+
+func _on_sort_children():
+	DialogRig.position.y = get_viewport_rect().size.y

@@ -148,7 +148,7 @@ func _break_into_lines(text):
 
 func get_config_from_actor(actor: Actor):
 	assert(actor != null, "Actor does not exist")
-	ActorName.text = actor.actor_name
+	ActorName.text = actor.actor_name if actor.actor_name != "Narrator" else ""
 	DialogConfig.theme_color = actor.theme_color
 	DialogConfig.font_color = actor.font_color
 	DialogConfig.dialog_font = actor.dialog_font

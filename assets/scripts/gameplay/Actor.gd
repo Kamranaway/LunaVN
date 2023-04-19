@@ -23,7 +23,8 @@ enum StartingPosition {Left, Center, Right}
 
 
 func _ready():
-	set_pose(0)
+	if len(pose_list) > 0:
+		set_pose(0)
 	
 	match starting_position:
 		StartingPosition.Left:

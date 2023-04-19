@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbx57a78ks2cv"]
+[gd_scene load_steps=9 format=3 uid="uid://dbx57a78ks2cv"]
 
 [ext_resource type="Script" path="res://assets/scripts/gameplay/StageController.gd" id="1_8rtcw"]
 [ext_resource type="Script" path="res://assets/scripts/gameplay/Background.gd" id="2_exgho"]
 [ext_resource type="Script" path="res://assets/scripts/gameplay/Actors.gd" id="2_ugthb"]
 [ext_resource type="Script" path="res://assets/scripts/gameplay/SFXPlayer.gd" id="3_cqegf"]
 [ext_resource type="PackedScene" uid="uid://coa3dd55rff5e" path="res://assets/scenes/gameplay/Dialog.tscn" id="4_kpafm"]
+[ext_resource type="PackedScene" uid="uid://cewirj5j643q6" path="res://assets/scenes/actors/Narrator.tscn" id="4_q26yr"]
 [ext_resource type="PackedScene" uid="uid://10p5ls6vycgr" path="res://assets/scenes/gameplay/ChoiceSelect.tscn" id="6_hqdil"]
 [ext_resource type="PackedScene" uid="uid://cwtlclgk2w6wa" path="res://assets/scenes/menu/PauseMenu.tscn" id="7_h8t4k"]
 
@@ -21,6 +22,8 @@ script = ExtResource("2_exgho")
 
 [node name="Actors" type="Node" parent="."]
 script = ExtResource("2_ugthb")
+
+[node name="Narrator" parent="Actors" instance=ExtResource("4_q26yr")]
 
 [node name="Weather" type="Node" parent="."]
 

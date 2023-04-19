@@ -9,11 +9,17 @@ static func load_background(name):
 static func dialog(actor_name: String, text: String):
 	DialogEvent.new(actor_name, text)
 
+
 static func response(actor_name:String, responses: Array[String]):
 	ResponseEvent.new(actor_name, responses)
 
+
 static func choice(choices: Array[String], duration = 0.0):
 	ChoiceEvent.new(choices, duration)
+
+
+static func narrate(text:String):
+	DialogEvent.new("Narrator", text)
 
 static func start_track(index):
 	var callable = func(index): MusicPlayer.start_track(index).bind(index)

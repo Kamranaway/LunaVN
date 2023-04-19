@@ -51,7 +51,8 @@ func _process(_delta):
 
 func reset_stage():
 	for actor in Actors.get_children():
-		actor.queue_free()
+		if actor.name != "Narrator":
+			actor.queue_free()
 
 
 func load_event(index):

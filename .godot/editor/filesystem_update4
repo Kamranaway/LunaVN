@@ -1,9 +1,0 @@
-res://assets/scenes/gameplay/MusicPlayer.tscn
-res://assets/scenes/stages/TestStage1.tscn
-res://assets/scenes/stages/TestStage2.tscn
-res://assets/scenes/gameplay/Dialog.tscn
-res://assets/scenes/gameplay/StageController.tscn
-res://assets/scripts/gameplay/event_classes/StageEvent.gd
-res://assets/scripts/gameplay/events/ResponseEvent.gd
-res://assets/scripts/gameplay/StageData.gd
-res://assets/scripts/gameplay/StageController.gd

@@ -82,3 +82,8 @@ func get_event_index_count() -> int:
 
 func get_num_choices() -> int:
 	return len(_choices_made)
+
+func skip_event():
+	_event_index_counter += 1
+	return _event_queue.pop_front()
+	

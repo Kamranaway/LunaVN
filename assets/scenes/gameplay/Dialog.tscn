@@ -44,6 +44,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_1nad6")
 _dialog_tween_duration = 0.5
+_fast_foward_velocity = 200
+_velocity = 30
 
 [node name="TextSoundPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_8l3sv")

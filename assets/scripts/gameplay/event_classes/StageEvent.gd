@@ -6,6 +6,9 @@ static func load_background(name):
 	CustomEvent.new(callable)
 
 
+static func skip_on_choice(stage_name, choice_index, choice_num, event_count):
+	ConditionalEvent.new(stage_name, choice_index, choice_num, event_count)
+
 static func dialog(actor_name: String, text: String):
 	DialogEvent.new(actor_name, text)
 

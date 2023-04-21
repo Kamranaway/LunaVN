@@ -30,3 +30,6 @@ static func interp_position(actor_name, new_pos: Vector2, delay = 1.0, trans_typ
 static func set_position(actor_name, new_pos: Vector2):
 	var callable = (func(actor_name, new_pos): StageController.Actors.get_actor(actor_name).set_position(new_pos)).bind(actor_name, new_pos)
 	CustomEvent.new(callable)
+
+static func set_pose(actor_name, index):
+	var callable = (func(actor_name, index):  StageController.Actors.get_actor(actor_name).set_pose(index).bind(actor_name, index))

@@ -1,6 +1,6 @@
 extends Event
 
-class_name CustomEvent
+class_name FunctionalEvent
 
 var callable
 

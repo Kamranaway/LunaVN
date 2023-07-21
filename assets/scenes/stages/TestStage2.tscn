@@ -4,9 +4,9 @@
 script/source = "extends StageBase
 
 func stage_script():
-	StageEvent.load_background(\"factory1\")
-	ActorEvent.add_actor(\"Kyle\")
-	StageEvent.dialog(\"Kyle\", \"Meow\")
+	Events.load_background(\"factory1\")
+	Events.add_actor(\"Kyle\")
+	Events.dialog(\"Kyle\", \"Meow\")
 "
 
 [node name="TestStage" type="Node"]

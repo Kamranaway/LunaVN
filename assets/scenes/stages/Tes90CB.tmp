@@ -4,16 +4,14 @@
 script/source = "extends StageBase
 
 func stage_script():
-	#init
 	Events.load_background(\"factory1\")
 	Events.add_actor(\"Kyle\")
-	
-	Events.transition_in()
-	#Acting
 	Events.dialog(\"Kyle\", \"Hello World\")
+	Events.narrate(\"hello\")
 	Events.choice([\"Yes\", \"No\"])
-	Events.transition_out()
-	Events.load_stage(\"TestStage2\")
+	Events.narrate(\"hello\")
+	Events.dialog(\"Kyle\", \"Hello World\")
+	Events.response(\"Kyle\", [\"Yes\", \"No\"])
 "
 
 [node name="TestStage" type="Node"]

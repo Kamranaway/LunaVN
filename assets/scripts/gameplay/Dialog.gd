@@ -23,6 +23,8 @@ var _line_queue = []
 var _last_char_count = 0
 var _tween
 
+var history : String = ""
+
 signal dialog_complete
 
 
@@ -45,7 +47,7 @@ func _process(_delta):
 	if(int(_characters_visible) > _last_char_count and len(DialogText.text) > 0):
 		TextSoundPlayer.play()
 	
-	if (_characters_visible >= DialogText.get_total_character_count()):
+	if (_characters_visible >= DialogText.get_total_character_count() and DialogText.get_total_character_count() > 0):
 		PointerAnimation.play("PointerAnimation")
 		Pointer.visible = true
 		if (Input.is_action_just_pressed("Next_Dialog")):
@@ -59,6 +61,11 @@ func _process(_delta):
 
 #Queue lines for a single actor
 func queue_lines(text):
+	if ActorName.text != "":
+		history += ActorName.text + ": "
+	history += text + "\n"
+	print(history)
+	
 	DialogRig.position.y = get_viewport_rect().size.y
 	await _box_up()
 	_line_queue.clear()
@@ -145,6 +152,7 @@ func _break_into_lines(text):
 		
 		index += 1
 	return lines
+
 
 func get_config_from_actor(actor: Actor):
 	assert(actor != null, "Actor does not exist")

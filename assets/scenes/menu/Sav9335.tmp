@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpe7q3qvu5epf"]
+[gd_scene load_steps=4 format=3 uid="uid://bpe7q3qvu5epf"]
 
 [ext_resource type="Script" path="res://assets/scripts/menu/SaveSlots.gd" id="1_7u7qg"]
+[ext_resource type="PackedScene" uid="uid://bwn4i6lxpfej3" path="res://assets/scenes/menu/SaveSlot.tscn" id="2_uuykq"]
 [ext_resource type="FontFile" path="res://assets/fonts/Exo2Bold.tres" id="3_vm622"]
 
 [node name="SaveSlots" type="PopupPanel"]
@@ -70,6 +71,9 @@ layout_mode = 2
 theme_override_constants/separation = 50
 
 [node name="Control" type="Control" parent="HBoxContainer/CenterContainer/MarginContainer/ScrollContainer/VBoxContainer/TopRow"]
+layout_mode = 2
+
+[node name="SaveSlot" parent="HBoxContainer/CenterContainer/MarginContainer/ScrollContainer/VBoxContainer/TopRow" instance=ExtResource("2_uuykq")]
 layout_mode = 2
 
 [node name="BottomRow" type="HBoxContainer" parent="HBoxContainer/CenterContainer/MarginContainer/ScrollContainer/VBoxContainer"]

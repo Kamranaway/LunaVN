@@ -5,6 +5,8 @@ Base Class for all stages
 
 """
 
+signal stage_loaded
+
 @onready var Actors = $Actors
 @onready var Background = $Background
 @onready var Weather = $Weather
@@ -12,6 +14,7 @@ Base Class for all stages
 @onready var Pause_Menu = $PauseMenu
 @onready var ChoiceSelect = $ChoiceSelect
 @onready var DialogBox = $Dialog
+@onready var Transition = $Transition
 #Music Player is a global
 #Stage Data is a global
 
@@ -36,10 +39,32 @@ func _ready():
 	
 	assert(len(_stage_list) > 0, "No stages found \n Please add a stage to " + dir.get_current_dir())
 
+#dangerous
+func wait_for_ready():
+	while(true):
+		if _get_all_nodes(self):
+			break
+
+func _get_all_nodes(node, ready = true) -> bool:
+	for n in node.get_children():
+		if n.get_child_count() > 0:
+			if !n.ready:
+				return false
+				
+			return _get_all_nodes(n, n.ready)
+		else:
+			if n.ready:
+				return true
+	return true
+
 
 func _process(_delta):
-	if Input.is_action_just_pressed("Menu"):
-		Pause_Menu.visible = !Pause_Menu.visible
+	
+	if Input.is_action_pressed("Skip"):
+		Input.action_press("Next_Dialog")
+		Engine.time_scale = 4.0
+	else:
+		Engine.time_scale = 1.0
 	
 	if (len(_event_queue) > 0 and _current_event == null):
 		_event_index_counter += 1

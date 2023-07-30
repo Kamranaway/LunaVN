@@ -1,10 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwtlclgk2w6wa"]
+[gd_scene load_steps=4 format=3 uid="uid://cwtlclgk2w6wa"]
 
 [ext_resource type="Script" path="res://assets/scripts/menu/PauseMenu.gd" id="1_mulf4"]
 [ext_resource type="FontFile" path="res://assets/fonts/Exo2Bold.tres" id="2_fy8i4"]
+[ext_resource type="PackedScene" uid="uid://bpe7q3qvu5epf" path="res://assets/scenes/menu/SaveSlots.tscn" id="4_sxq45"]
 
 [node name="PauseMenu" type="Control"]
-visible = false
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,6 +48,7 @@ theme_override_fonts/font = ExtResource("2_fy8i4")
 theme_override_font_sizes/font_size = 80
 text = "Save
 "
+flat = false
 
 [node name="Load" type="MenuButton" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -55,11 +57,12 @@ theme_override_font_sizes/font_size = 80
 text = "Load"
 flat = false
 
-[node name="Backlog" type="MenuButton" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
+[node name="History" type="MenuButton" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_fy8i4")
 theme_override_font_sizes/font_size = 80
-text = "Backlog"
+text = "History
+"
 flat = false
 
 [node name="Options" type="MenuButton" parent="MarginContainer/Panel/CenterContainer/VBoxContainer"]
@@ -75,8 +78,11 @@ theme_override_fonts/font = ExtResource("2_fy8i4")
 theme_override_font_sizes/font_size = 80
 text = "Exit"
 
+[node name="SaveSlots" parent="." instance=ExtResource("4_sxq45")]
+visible = false
+
 [connection signal="button_down" from="MarginContainer/Panel/CenterContainer/VBoxContainer/Save" to="." method="_on_save_button_down"]
 [connection signal="button_down" from="MarginContainer/Panel/CenterContainer/VBoxContainer/Load" to="." method="_on_load_button_down"]
-[connection signal="button_down" from="MarginContainer/Panel/CenterContainer/VBoxContainer/Backlog" to="." method="_on_backlog_button_down"]
+[connection signal="button_down" from="MarginContainer/Panel/CenterContainer/VBoxContainer/History" to="." method="_on_history_button_down"]
 [connection signal="button_down" from="MarginContainer/Panel/CenterContainer/VBoxContainer/Options" to="." method="_on_options_button_down"]
 [connection signal="button_down" from="MarginContainer/Panel/CenterContainer/VBoxContainer/Exit" to="." method="_on_exit_button_down"]

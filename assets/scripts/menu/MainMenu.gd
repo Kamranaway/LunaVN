@@ -1,7 +1,10 @@
 extends Control
 
+
 func _on_start_button_down():
-	pass # Replace with function body.
+	Events.transition_out()
+	await StageController.Transition.transition_complete
+	Events.load_stage("TestStage1")
 
 
 func _on_load_button_down():

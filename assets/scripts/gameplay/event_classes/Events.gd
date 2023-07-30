@@ -2,7 +2,9 @@ class_name Events
 
 
 static func load_background(name):
-	var callable = (func(name): StageController.Background.load_background(name)).bind(name)
+	var callable = (func(name): 
+		StageController.Background.load_background(name)
+		).bind(name)
 	FunctionalEvent.new(callable)
 
 
@@ -24,6 +26,9 @@ static func choice(choices: Array[String], duration = 0.0):
 
 static func narrate(text:String):
 	DialogEvent.new("Narrator", text)
+	
+static func wait(duration:float):
+	WaitEvent.new(duration)
 
 
 static func start_track(index):
@@ -45,9 +50,26 @@ static func stop_sfx():
 	var callable = func(): StageController.stop()
 	FunctionalEvent.new(callable)
 
+static func transition_out():
+	var callable = (func(): 
+		StageController.Transition.transition_out()
+		await StageController.Transition.transition_complete
+		)
+	FunctionalEvent.new(callable)
+	
+
+static func transition_in():
+	var callable = (func(): 
+		StageController.Transition.transition_in()
+		await await StageController.Transition.transition_complete
+		)
+	FunctionalEvent.new(callable)
 
 static func load_stage(stage_name: String):
-	var callable = (func(stage_name): StageController.load_stage(stage_name)).bind(stage_name)
+	var callable = (func(stage_name):
+		StageController.load_stage(stage_name)
+		).bind(stage_name)
+	
 	FunctionalEvent.new(callable)
 
 
@@ -85,4 +107,5 @@ static func set_position(actor_name, new_pos: Vector2):
 static func set_pose(actor_name, index):
 	var callable = (func(actor_name, index):  StageController.Actors.get_actor(actor_name).set_pose(index).bind(actor_name, index))
 	FunctionalEvent.new(callable)
+	
 
